@@ -16,4 +16,4 @@ This repository contains a simple and intuitive Kiosk Menu Ordering User Interfa
 ## Project Structure
 - **index.html**: Main UI layout with buttons and ordering functionality.
 - **style.css** (inlined in HTML): Manages the UI's appearance, including colors, layout, and button styles.
-- **script.js** (inlined in HTML): Handles the interactivity such as menu filtering, order input, and order submission.
+- **main.js** (inlined in HTML): Handles the interactivity such as menu filtering, order input, and order submission.
