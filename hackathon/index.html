@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 주문 키오스크</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.logo {
+    margin-bottom: 10px;
+    width: 300px; /* 로고 크기를 줄이기 위해 너비 설정 */
+    height: auto; /* 비율을 유지하도록 높이는 자동 */
+}
+.start-button {
+    padding: 20px 40px;
+    font-size: 2em;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.start-button:hover {
+    background-color: #ff4500;
+}
+
+    </style>
+</head>
+<body>
+    <img src="img/logo.png" alt="로고" class="logo">
+    <button class="start-button" onclick="goToMenu()">시작하기</button>
+    <script>
+        function goToMenu() {
+            window.location.href = 'menu.html';
+        }
+    </script>
+</body>
+</html>

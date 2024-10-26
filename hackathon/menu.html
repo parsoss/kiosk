@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키오스크 메뉴 주문</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-categories">
+        <img src="img/logo-2.png" alt="로고" class="logo">
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <label class="category-button" onclick="setActiveButton(this); filterMenu('all')">전체</label>
+            <label class="category-button" onclick="setActiveButton(this); filterMenu('coffee')">커피</label>
+            <label class="category-button" onclick="setActiveButton(this); filterMenu('ade')">에이드</label>
+            <label class="category-button" onclick="setActiveButton(this); filterMenu('tea')">티</label>
+            <label class="category-button" onclick="setActiveButton(this); filterMenu('dessert')">디저트</label>
+        </div>
+    </div>
+
+    <!-- 메뉴 목록 -->
+    <div class="menu-items">
+        <!-- 커피 -->
+        <div class="menu-item coffee">
+            <img src="img/ess.png" alt="에스프레소">
+            <p>에스프레소</p>
+        </div>
+        <div class="menu-item coffee">
+            <img src="img/aa.png" alt="아메리카노">
+            <p>아메리카노</p>
+        </div>
+        <div class="menu-item coffee">
+            <img src="img/lat.png" alt="카페라떼">
+            <p>카페라떼</p>
+        </div>
+        <div class="menu-item coffee">
+            <img src="img/cap.png" alt="카푸치노">
+            <p>카푸치노</p>
+        </div>
+
+        <!-- 에이드 -->
+        <div class="menu-item ade">
+            <img src="img/lem.png" alt="레몬에이드">
+            <p>레몬에이드</p>
+        </div>
+        <div class="menu-item ade">
+            <img src="img/gra.png" alt="청포도에이드">
+            <p>청포도에이드</p>
+        </div>
+        <div class="menu-item ade">
+            <img src="img/jam.png" alt="자몽에이드">
+            <p>자몽에이드</p>
+        </div>
+
+        <!-- 티 -->
+        <div class="menu-item tea">
+            <img src="img/ice.png" alt="아이스티">
+            <p>아이스티</p>
+        </div>
+        <div class="menu-item tea">
+            <img src="img/bla.png" alt="블랙티">
+            <p>블랙티</p>
+        </div>
+        <div class="menu-item tea">
+            <img src="img/cemo.png" alt="캐모마일">
+            <p>캐모마일</p>
+        </div>
+
+        <!-- 디저트 -->
+        <div class="menu-item dessert">
+            <img src="img/donut.png" alt="치즈 도넛">
+            <p>치즈 도넛</p>
+        </div>
+        <div class="menu-item dessert">
+            <img src="img/roll.png" alt="롤케이크">
+            <p>롤케이크</p>
+        </div>
+        <div class="menu-item dessert">
+            <img src="img/cru.png" alt="크루아상">
+            <p>크루아상</p>
+        </div>
+    </div>
+    <br><br>
+
+    <!-- Floating input for user order -->
+    <div class="floating-input">
+        <input type="text" id="orderInput" placeholder="메뉴명 수량을 입력하세요 (예: 아메리카노 3, 크루아상 2)">
+        <button id="orderButton" class="send-button" onclick="updateOrderList()">주문 추가</button>
+    </div>
+
+    <div class="order-list">
+        <h3 class="jumun">주문 목록</h3>
+        <ul id="orderItems">
+            <!-- 주문된 항목들이 여기 추가됩니다. -->
+        </ul>
+        <button onclick="placeOrder()" style="display: block; margin: 20px auto; padding: 15px 30px; background-color: rgb(240, 117, 117); color: white; border: none; border-radius: 10px; font-size: 1.2em; cursor: pointer;">주문하기</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
