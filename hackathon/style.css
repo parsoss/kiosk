@@ -30,25 +30,35 @@ body {
 }
 
 .category-button {
-    padding: 10px 20px;
+    padding: 15px 30px; /* Large padding for kiosk usage */
     border: none;
-    border-radius: 25px;
-    background-color: #000;
+    border-radius: 10px; /* Reduced roundness for a professional kiosk look */
+    background-color: #000; /* Black background for a sleek look */
     color: #fff;
-    font-size: 1em;
+    font-size: 1.2em; /* Larger font size for better visibility */
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 10px;
 }
 
 .category-button:hover {
-    background-color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #333; /* Slightly lighter color on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow for hover effect */
+}
+
+.category-button:active {
+    background-color: #555; /* Even lighter color on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow to simulate pressing */
 }
 
 .category-button.active {
-    background-color: #fff;
-    color: #000;
+    background-color: #444; /* Distinct color for active state */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .menu-items {
@@ -88,6 +98,22 @@ body {
     font-weight: bold;
     font-size: 1.1em;
     color: #333;
+}
+
+.cancel-button {
+    margin-left: 10px;
+    padding: 2px 6px;
+    background-color: transparent; /* No solid background */
+    color: #ff4d4d; /* Red color for the "X" */
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.cancel-button:hover {
+    color: #ff1a1a; /* Darker red on hover */
 }
 
 .floating-input {
