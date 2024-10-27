@@ -32,12 +32,12 @@
         <div class="menu-item coffee">
             <img src="img/lat.png" alt="카페라떼">
             <p>카페라떼</p>
-            <p class="price">4000원</p>
+            <p class="price">3000원</p>
         </div>
         <div class="menu-item coffee">
             <img src="img/cap.png" alt="카푸치노">
             <p>카푸치노</p>
-            <p class="price">3000원</p>
+            <p class="price">4000원</p>
         </div>
 
         <!-- 에이드 -->
@@ -93,18 +93,24 @@
     </div>
 
     <br><br><br>
+    
 
     <!-- Floating input for user order -->
-    <div class="floating-input">
-        <input type="text" id="orderInput" placeholder="무엇을 주문하실건가요?">
-        <button id="orderButton" class="send-button" onclick="fetchGPTResponse()">주문 추가</button>
+    <div class="voice-container">
+        <button id="recordButton">
+            <svg id="micIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+        </button>
     </div>
 
     <div class="order-list">
         <h3 class="jumun">주문 목록</h3>
         <ul id="orderItems"></ul>
-        <p id="totalPrice">총 가격: 0원</p>
-        <button onclick="placeOrder()" class="complete-button">주문하기</button>
+        <br><br><br><br>
     </div>
 
     <script src="main.js"></script>

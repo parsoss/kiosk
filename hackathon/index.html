@@ -43,9 +43,49 @@
     <img src="img/logo.png" alt="로고" class="logo">
     <button class="start-button" onclick="goToMenu()">시작하기</button>
     <script>
-        function goToMenu() {
-            window.location.href = 'menu.html';
-        }
+        // 오디오 재생 유틸리티 함수
+const playAudio = (filename) => {
+   const audio = new Audio(`audio/${filename}.mp3`);
+   audio.play().catch(error => {
+       console.error('오디오 재생 실패:', error);
+   });
+};
+
+// 메뉴 페이지로 이동하는 함수
+function goToMenu() {
+   window.location.href = 'menu.html';
+}
+
+// 시작하기 버튼에 클릭 효과와 음성 추가
+const initialize = () => {
+   // 페이지 로드 시 클릭.mp3 재생
+   playAudio('클릭');
+
+   // 시작하기 버튼에 클릭 이벤트 추가
+   const startButton = document.querySelector('.start-button');
+   if (startButton) {
+       startButton.addEventListener('click', () => {
+           // 클릭 효과를 위한 스타일 추가
+           startButton.style.transform = 'scale(0.95)';
+           setTimeout(() => {
+               startButton.style.transform = 'scale(1)';
+               goToMenu();
+           }, 100);
+       });
+
+       // 호버 효과를 부드럽게 만들기
+       startButton.style.transition = 'all 0.3s ease';
+   }
+
+   // 로고 이미지 로드 최적화
+   const logo = document.querySelector('.logo');
+   if (logo) {
+       logo.draggable = false; // 드래그 방지
+   }
+};
+
+// 페이지 로드 시 초기화 실행
+document.addEventListener('DOMContentLoaded', initialize);
     </script>
 </body>
 </html>

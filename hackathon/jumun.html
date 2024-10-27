@@ -63,6 +63,63 @@
         document.getElementById('homeButton').addEventListener('click', function() {
             window.location.href = 'index.html'; // 홈 페이지로 이동
         });
+
+        // 오디오 재생 유틸리티 함수
+const playAudio = (filename) => {
+   const audio = new Audio(`audio/${filename}.mp3`);
+   audio.play().catch(error => {
+       console.error('오디오 재생 실패:', error);
+   });
+};
+
+// 홈으로 돌아가기 버튼 스타일링 및 이벤트 처리
+const initialize = () => {
+   // 완료 음성 재생
+   playAudio('완료');
+
+   // 홈으로 돌아가기 링크 스타일링
+   const link = document.querySelector('.container p:last-child');
+   if (link) {
+       link.style.cursor = 'pointer';
+       link.style.color = '#5851c0';
+       link.style.textDecoration = 'underline';
+       link.addEventListener('click', () => {
+           window.location.href = 'menu.html';
+       });
+   }
+
+   // 컨테이너 스타일링
+   const container = document.querySelector('.container');
+   if (container) {
+       container.style.textAlign = 'center';
+       container.style.padding = '50px 20px';
+       container.style.maxWidth = '600px';
+       container.style.margin = '0 auto';
+       container.style.marginTop = '100px';
+       container.style.backgroundColor = '#fff';
+       container.style.borderRadius = '12px';
+       container.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+   }
+
+   // h1 스타일링
+   const heading = document.querySelector('.container h1');
+   if (heading) {
+       heading.style.color = '#333';
+       heading.style.marginBottom = '30px';
+       heading.style.fontSize = '2.5em';
+   }
+
+   // 문구 스타일링
+   const message = document.querySelector('.container p:first-of-type');
+   if (message) {
+       message.style.color = '#666';
+       message.style.fontSize = '1.2em';
+       message.style.marginBottom = '40px';
+   }
+};
+
+// 페이지 로드 시 초기화 실행
+document.addEventListener('DOMContentLoaded', initialize);
     </script>
 </body>
 </html>
