@@ -17,6 +17,5 @@ This **Kiosk Menu Ordering UI** project, developed as part of a hackathon, provi
 1. **Start**: Click the "Start" button to begin the ordering process.
 2. **Category Selection**: Use category buttons to browse and filter items.
 3. **Voice Ordering**: Press the "Voice Order" button, then speak your order (e.g., "Americano 3, Croissant 2"). Google STT will recognize the command and add it to the order list.
-4. **Recommendations**: The system provides suggestions based on the order using GPT-4-turbo, enhancing the user experience with relevant item ideas
-
+4. **Recommendations**: The system provides suggestions based on the order using GPT-4o-mini
 
