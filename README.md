@@ -16,5 +16,5 @@ This **Kiosk Menu Ordering UI** project, developed as part of a hackathon, provi
 2. **Category Selection**: Use category buttons to browse and filter items.
 3. **Voice Ordering**: Press the "Voice Order" button, then speak your order (e.g., "Americano 3, Croissant 2"). Google STT will recognize the command and add it to the order list.
 4. **Recommendations**: The system provides suggestions based on the order using GPT-4-turbo, enhancing the user experience with relevant item ideas
-
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgjbae1212%2Fhit-counter)](https://hits.seeyoufarm.com)
+5. 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fparsoss%2Fkiosk%2Ftree%2Fmain&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
